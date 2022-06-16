@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import Footer from "./footer";
-import Header from "./header";
+import Product from "./product";
 
 function Shop() {
   const [posts, setPosts] = useState([]);
@@ -20,67 +19,13 @@ function Shop() {
           <div className="row shop-wthree-info text-center">
             <div className="row shop-wthree-info text-center mb-5">
               {posts.map((post) => (
-                <div className="product-shoe-info shoe">
-                  <div className="men-thumb-item">
-                    <img src={post.image} className="img-fluid" alt="" />
-                  </div>
-                  <div className="item-info-product">
-                    <h4>
-                      <a href="single.html">{post.name} </a>
-                    </h4>
-
-                    <div className="product_price">
-                      <div className="grid-price">
-                        <span className="money">
-                          <span className="line">{post.price}</span>{" "}
-                          {post.discountedPrice}
-                        </span>
-                      </div>
-                    </div>
-                    <ul className="stars">
-                      <li>
-                        <a href="#">
-                          <span
-                            className="fa fa-star"
-                            aria-hidden="true"
-                          ></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <span
-                            className="fa fa-star"
-                            aria-hidden="true"
-                          ></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <span
-                            className="fa fa-star-half-o"
-                            aria-hidden="true"
-                          ></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <span
-                            className="fa fa-star-half-o"
-                            aria-hidden="true"
-                          ></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <span
-                            className="fa fa-star-o"
-                            aria-hidden="true"
-                          ></span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                <Product
+                  key={post.id}
+                  Image={post.image}
+                  Name={post.name}
+                  Price={post.price}
+                  DiscountedPrice={post.discountedPrice}
+                />
               ))}
             </div>
           </div>

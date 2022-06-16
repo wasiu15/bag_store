@@ -38,34 +38,6 @@ function Header() {
               <li>
                 <Link to="/about">About Us</Link>
               </li>
-              <li>
-                <label for="drop-2" className="toggle">
-                  Dropdown{" "}
-                  <span className="fa fa-angle-down" aria-hidden="true"></span>
-                </label>
-                <Link to="/">
-                  Dropdown{" "}
-                  <span className="fa fa-angle-down" aria-hidden="true"></span>
-                </Link>
-                <input type="checkbox" id="drop-2" />
-                <ul>
-                  <li>
-                    <a href="/coming.html" className="drop-text">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/about.html" className="drop-text">
-                      Features
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/single.html" className="drop-text">
-                      Single Page
-                    </a>
-                  </li>
-                </ul>
-              </li>
 
               <li>
                 <Link to="/shop">Collections</Link>
