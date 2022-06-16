@@ -7,7 +7,7 @@ function Shop() {
 
   useEffect(function () {
     axios
-      .get("https://localhost:44371/api/bags")
+      .get("http://bagsapi-001-site1.dtempurl.com/api/bags")
       .then((response) => setPosts(response.data));
   });
   return (
